@@ -1,0 +1,22 @@
+{
+  "name": "belt_exam",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Curtis Wulfsohn <cwulfsohn26@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.2",
+    "angular-cookies": "^1.6.2",
+    "install": "^1.0.4"
+  }
+}
