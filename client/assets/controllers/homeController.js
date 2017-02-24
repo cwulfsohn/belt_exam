@@ -6,4 +6,26 @@ app.controller('homeController', function($scope, userFactory, $cookies, $locati
   $cookies.remove('id')
   $location.url('/')
 }
+$scope.showPolls = function(){
+  userFactory.showPolls(function(data){
+    if(data.err){
+      console.log(data.err)
+    }
+    else{
+      $scope.polls = data.polls
+    }
+  })
+}
+$scope.showPolls();
+$scope.delete = function(poll_id){
+  factory.delete(poll_id, function(data){
+    if(data.err){
+      console.log(data.err)
+    }
+    else{
+      console.log(data.poll)
+      $scope.showPolls();
+    }
+  })
+}
 })

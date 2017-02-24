@@ -9,6 +9,14 @@ app.config(function($routeProvider){
     templateUrl: "partials/home.html",
     controller: "homeController"
   })
+  .when('/create', {
+    templateUrl: "partials/create.html",
+    controller: "createController"
+  })
+  .when('/poll/:id', {
+    templateUrl: "partials/poll.html",
+    controller: "pollController"
+  })
   .otherwise({
     redirectTo: '/'
   })
